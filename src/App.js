@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import styled from "styled-components";
 
@@ -53,7 +52,7 @@ const Overlay = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: #e1e1e1;
-  z-index: 0; /* Ensure it's behind other elements */
+  z-index: 0;
   overflow: scroll;
 `;
 
@@ -95,10 +94,9 @@ const App = () => {
         {width > 800 ? <HeadDescription /> : <PhoneHeadDescription />}
 
         <Video />
-        
+
         <Footer />
         <Carousel images={images} />
-
       </Overlay>
     </Main>
   );
