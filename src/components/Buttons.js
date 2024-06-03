@@ -68,14 +68,22 @@ const Text = styled.h1`
 `;
 
 const Buttons = () => {
-  const { width, height } = WindowSize();
+  const { width } = WindowSize();
+
+  const handleChromeClick = () => {
+    window.open("https://chromewebstore.google.com/?pli=1", "_blank", "noopener,noreferrer");
+  };
+
+  const handleWwClick = () => {
+    window.open("https://waterlooworks.uwaterloo.ca", "_blank", "noopener,noreferrer");
+  };
 
   return (
     <Container>
-      <ChromeButton>
+      <ChromeButton onClick={handleChromeClick}>
         <Text>{width > 1000 ? "download on chrome" : "download"}</Text>
       </ChromeButton>
-      <WwButton>
+      <WwButton onClick={handleWwClick}>
         <Text>{width > 1000 ? "browse wloo works" : "wworks"}</Text>
       </WwButton>
     </Container>
