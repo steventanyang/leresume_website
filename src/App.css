@@ -1,0 +1,60 @@
+::-webkit-scrollbar {display:none;}
+
+.main {
+  color: "E1E1E1";
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 15vh;
+  background-color: white;
+}
+
+.title_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100vw;
+}
+
+.buttons_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.top_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 10vh;
+  background-color: blue;
+}
+
+.content_container-test {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: beige;
+  height: 50vh;
+  width: 100vw;
+}
+
+.content_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+  height: 50vh;
+  width: 100vw;
+}
+
