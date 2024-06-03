@@ -28,7 +28,7 @@ const LeResume = () => {
     return (
         <Container>
             <Logo src={smile}></Logo>
-            <Title>Le Resume</Title>
+            <Title>LeResume</Title>
         </Container>
     );
 }

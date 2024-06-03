@@ -52,11 +52,11 @@ const Footer = () => {
       </TextContainer>
 
       <TextContainer>
-        <Text>Le Resume is not affiliated with the University of Waterloo</Text>
+        <Text>LeResume is not affiliated with the University of Waterloo</Text>
       </TextContainer>
 
       <TextContainer>
-        <Text>© 2024 Le Resume</Text>
+        <Text>© 2024 LeResume</Text>
       </TextContainer>
     </Container>
   );
