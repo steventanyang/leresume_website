@@ -29,7 +29,7 @@ const ButtonContainer = styled.div`
 
 const Button = styled.button`
   width: 10vw;
-  height: 7vh;
+  height: 7.5vh;
   border-radius: 1rem;
   background-color: #73698a;
   border: 0.2rem solid #40394e;
@@ -38,7 +38,6 @@ const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-
   &:hover {
     background-color: #615579;
   }
@@ -59,8 +58,8 @@ const Text = styled.h1`
   color: #f3f3f3;
   font-weight: 900;
   font-family: "Inter", sans-serif;
-  font-size: 2rem;
-  margin: 10vw;
+  font-size: 2.8rem;
+  padding-bottom: 0.2rem;
 `;
 
 const SubText = styled.h2`
@@ -70,7 +69,7 @@ const SubText = styled.h2`
   font-size: 1.5rem;
 `;
 
-const HeadDescription = () => {
+const HeadDescription = ({ onClickPlay }) => {
   const { width, height } = WindowSize();
   return (
     <Container>
@@ -78,11 +77,11 @@ const HeadDescription = () => {
         Create resumes and cover letters with one{" "}
         <ButtonContainer>
           {width > 900 ? (
-            <Button>
+            <Button onClick={onClickPlay}>
               <Text>click</Text>
             </Button>
           ) : (
-            <TabletButton>
+            <TabletButton onClick={onClickPlay}>
               <Text>click</Text>
             </TabletButton>
           )}
@@ -90,7 +89,7 @@ const HeadDescription = () => {
       </TitleText>
 
       <SubText>
-        Let us handle the tedious so you can focus on what’s important ...
+        Let us handle the tedious so you can focus on what’s important
       </SubText>
     </Container>
   );

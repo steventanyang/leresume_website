@@ -10,7 +10,7 @@ import HeadDescription from "./components/HeadDescription";
 import PhoneHeadDescription from "./components/PhoneHeadDescription";
 import Video from "./components/Video";
 import Footer from "./components/Footer";
-
+import { useRef } from "react";
 import Carousel from "./components/Carousel";
 
 import bruh from "./assets/bruh_holo.png";
@@ -76,6 +76,13 @@ const PhoneButtonContainer = styled.div`
 
 const App = () => {
   const { width, height } = WindowSize();
+  const videoRef = useRef(null);
+
+  const handlePlayVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
 
   return (
     <Main>
@@ -91,9 +98,13 @@ const App = () => {
           </PhoneButtonContainer>
         ) : null}
 
-        {width > 800 ? <HeadDescription /> : <PhoneHeadDescription />}
+        {width > 800 ? (
+          <HeadDescription onClickPlay={handlePlayVideo} />
+        ) : (
+          <PhoneHeadDescription onClickPlay={handlePlayVideo} />
+        )}
 
-        <Video />
+        <Video videoRef={videoRef} />
 
         <Footer />
         <Carousel images={images} />

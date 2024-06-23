@@ -19,10 +19,10 @@ const VideoElement = styled.video`
   margin-bottom: 15vh;
 `;
 
-const Video = () => {
+const Video = ({ videoRef }) => {
   return (
     <Container>
-      <VideoElement controls>
+      <VideoElement ref={videoRef} controls>
         <source src={Demo} type="video/mp4" />
         Your browser does not support the video tag.
       </VideoElement>

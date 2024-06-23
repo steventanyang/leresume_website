@@ -64,13 +64,13 @@ const SubText = styled.h2`
   margin-top: 5vh;
 `;
 
-const PhoneHeadDescription = () => {
+const PhoneHeadDescription = ({ onClickPlay }) => {
   const { width, height } = WindowSize();
   return (
     <Container>
       <TitleText>Create resumes and cover letters with one</TitleText>
 
-      <Button>
+      <Button onClick={onClickPlay}>
         <Text>click</Text>
       </Button>
 
