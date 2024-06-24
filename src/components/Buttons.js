@@ -71,7 +71,7 @@ const Buttons = () => {
   const { width } = WindowSize();
 
   const handleChromeClick = () => {
-    window.open("https://chromewebstore.google.com/?pli=1", "_blank", "noopener,noreferrer");
+    window.open("https://chromewebstore.google.com/detail/leresume/ahkacokggkmolbaefkickcdfhpjlghhn", "_blank", "noopener,noreferrer");
   };
 
   const handleWwClick = () => {

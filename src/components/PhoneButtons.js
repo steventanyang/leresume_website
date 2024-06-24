@@ -67,12 +67,21 @@ const Text = styled.h1`
 `;
 
 const PhoneButtons = () => {
+
+  const handleChromeClick = () => {
+    window.open("https://chromewebstore.google.com/detail/leresume/ahkacokggkmolbaefkickcdfhpjlghhn", "_blank", "noopener,noreferrer");
+  };
+
+  const handleWwClick = () => {
+    window.open("https://waterlooworks.uwaterloo.ca", "_blank", "noopener,noreferrer");
+  };
+
   return (
     <Container>
-      <ChromeButton>
+      <ChromeButton onClick={handleChromeClick}>
         <Text>download on chrome</Text>
       </ChromeButton>
-      <WwButton>
+      <WwButton onClick={handleWwClick}>
         <Text>browse wloo works</Text>
       </WwButton>
     </Container>
